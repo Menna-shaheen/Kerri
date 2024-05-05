@@ -1,0 +1,269 @@
+body {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+    --maincolor: #e65f78;
+    --pcolor: #a7a6a6;
+
+}
+
+html{
+    scroll-padding-top: 65px;
+}
+.text-color {
+    color: var(--maincolor);
+}
+
+.pcolor {
+    color: var(--pcolor);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--maincolor);
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--maincolor);
+}
+
+.navbar {
+    background-color: rgb(231, 231, 231);
+    height: auto;
+    width: 100%;
+    z-index: 20;
+
+}
+
+header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/header-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+header h1 {
+    font-size: 45px;
+   
+}
+
+header .btn {
+    border: 1px solid white;
+    color: white;
+}
+
+header .btn:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+header h1:after {
+    content: ' ';
+    animation: header-animation 3s infinite;
+}
+@keyframes header-animation {
+    0% {content: "|";}
+    3% {content: "D|";}
+    5% {content: "De|";}
+    7% {content: "Dev|";}
+    10% {content: "Deve|";}
+    13% {content: "Devel|";}
+    15% {content: "Develo|";}
+    17% {content: "Develop|";}
+    20% {content: "Developm|";}
+    24% {content: "Developme|";}
+    25% {content: "Developmen|";}
+    27% {content: "Development|";}
+    30% {content: "Development|";}
+   
+    32% {content: "Developmen|";}
+    35% {content: "Developme|";}
+    37% {content: "Develop|";}
+    40% {content: "Develo|";}
+    42% {content: "Devel|";}
+    45% {content: "Deve|";}
+    47% {content: "Dev|";}
+    50% {content: "De|";}
+    52% {content: "Des|";}
+    55% {content: "Desi|";}
+    57% {content: "Desig|";}
+    60% {content: "Design|";}
+    62% {content: "Designe|";}
+    65% {content: "Designer|";}
+    67% {content: "Designer|";}
+   
+    70% {content: "Designe|";}
+    72% {content: "Design|";}
+    75% {content: "Desig|";}
+    77% {content: "Desi|";}
+    80% {content: "Des|";}
+    82% {content: "De|";}
+    85% {content: "Dev|";}
+    87% {content: "Deve|";}
+    90% {content: "Devel|";}
+    92% {content: "Develo|";}
+    95% {content: "Develop|";}
+    97% {content: "Develope|";}
+    100% {content: "Developer|";}
+}
+header .shape {
+    margin-top: 13%;
+    width: 40px;
+    height: 70px;
+    border-radius: 30px;
+    border: 1px solid white;
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: moving 1.5s infinite ease-in;
+}
+@keyframes moving{
+    0%{ top: 0;}
+    50%{ top: -20%;}
+
+    100%{ top: -38%;}
+}
+header .shape::after {
+    content: '';
+    width: 3px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.settings {
+    width: 35px;
+    height: 34px;
+    background-color: var(--maincolor);
+    position: absolute;
+    top: 30%;
+    z-index: 15;
+    border-radius: 2px;
+    color: white;
+}
+/*   End header */
+/* Start About */
+.about{
+    padding: 7%;
+}
+.about p{
+    color: RGB(108, 117, 125);
+}
+.about .icons .icon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid gray;
+    transition: all 0.3s;
+
+}
+.about .icons .icon:hover{
+    border: 2px solid var(--maincolor);
+    color: var(--maincolor);
+}
+/* End About */
+/* Start Client */
+#Client {
+   padding: 6% 0 2% 0;
+    background-color:#F1F1F1;
+}
+.carousel-indicators{
+    bottom: -20px;
+}
+.carousel-indicators [data-bs-target] {
+    height: 6px;
+    background-color: var(--maincolor);
+
+}
+/* End Client */
+/* Start Services */
+.portfolio .title{
+    padding: 6% 0 4% 0;
+}
+.nav-tabs{
+    border: none;
+
+}
+
+.nav-link{
+    color: black;
+   
+}
+.nav-link:active{
+    color: var(--maincolor);
+ 
+ 
+}
+.nav-tabs .nav-link:hover{
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active{
+    border-color: transparent;
+    border-radius: 20px;
+    color: white;
+    background-color: #e65f78;
+}
+
+.portfolio .item .layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    transition: all 0.5s;
+    z-index: 4;
+}
+.portfolio .item:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.63);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.portfolio .item:hover::after{
+    opacity: 1;
+}
+.portfolio .item img{
+    transition: all 0.5s;
+}
+.portfolio .item:hover img{
+    transform: scale(1.2);
+}
+.portfolio .item:hover .layer{
+    top: 0;
+}
+.portfolio .work{
+    background-color: #F1F1F1;
+}
+/* End Portfolio */
+/* Start Blog */
+.blog{
+    margin-top: 8%;
+    background-color: #F1F1F1;
+}
+/* End Blog */
+/* Start Contact */
+.contact .icon .mobile-icon{
+    font-size: 60px;
+}
+.button{
+    display: flex;
+    justify-content: end;
+
+}
+.button .btn{
+    border: 1px solid transparent;
+    background-color: var(--maincolor);
+    color: white;
+    height: auto;
+}
+
+/* End Contact */
